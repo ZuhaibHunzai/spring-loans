@@ -10,7 +10,7 @@
   padding-top: 6px;
 }
 
-.navbar {
+.custom-navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -18,17 +18,17 @@
   padding-right: 15px;
   height: 10vh;
 }
-.nav-menu ul {
+.custom-nav-menu ul {
   display: flex;
   justify-content: top;
   align-items: top;
   list-style: none;
 }
-.nav-list {
+.custom-nav-list {
   margin-right: 6px;
   padding: 20px 12px 22px 20px;
 }
-.nav-link {
+.custom-nav-link {
   font-weight: 300;
   text-decoration: none;
   text-transform: uppercase;
@@ -40,7 +40,7 @@
   font-weight: 300;
 }
 
-.nav-link:hover {
+.custom-nav-link:hover {
   background-color: #ede3e0;
   color: #8d8986;
 }
@@ -62,7 +62,7 @@
   background-color: #101010;
 }
 
-.nav-menu {
+.custom-nav-menu {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -129,6 +129,7 @@
   display: flex;
   font-size: 12px;
   padding-left: 8px;
+  margin: 0;
 }
 .ssl-img {
   width: 120px;
@@ -137,6 +138,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 10px;
 }
 .card-heading {
   text-align: center;
@@ -172,7 +174,7 @@
   justify-content: space-between;
   align-items: center;
 }
-.card {
+.custom-card {
   width: 270px;
   height: 180px;
   display: flex;
@@ -193,12 +195,16 @@
 }
 .description {
   letter-spacing: 0.25px;
+  margin: 0;
   margin-top: 10px;
+
   text-align: center;
 }
+
 .arrow {
-  font-size: 48px;
-  color: #96c142;
+  height: 31px;
+  width: 36px;
+  fill: #96c142 !important;
 }
 .start-now {
   padding: 15px 30px;
@@ -274,10 +280,120 @@ footer {
   text-decoration: underline;
 }
 
+/* Modal Styles */
+
+.modal-title-custom {
+  font-size: 18px;
+}
+.modal-dialog {
+  max-width: 580px !important;
+}
+.modal-body {
+  max-height: calc(100vh - 165px);
+  overflow-y: scroll;
+}
+.modal-header {
+  padding: 6px 20px;
+}
+.close {
+  background: transparent;
+  color: #ccc;
+  border: 0;
+  font-size: 28px;
+  font-weight: 700;
+}
+.btn-default {
+  border: 1px solid #ccc !important;
+}
+
+.ratesandfees-example {
+  width: 100%;
+  font-size: 13px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+}
+.multiple-inputs {
+  width: 100%;
+  display: flex;
+  height: 34px;
+  border-radius: 0px;
+}
+.sub-input {
+  width: 100%;
+  height: 34px;
+  padding: 6px 12px;
+  font-size: 14px;
+  outline: none;
+  border: 1px solid #bbbbbb;
+}
+#subInput1 {
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+}
+#subInput3 {
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+.ratesandfees-example-left,
+.ratesandfees-example-right {
+  text-align: left;
+  padding: 5px 3px 3px;
+  background: #eaeaea;
+  border: 1px solid #fff;
+}
+
+.ratesandfees-apr-left {
+  text-align: left;
+  padding: 2px;
+}
+.ratesandfees-apr {
+  background: #eaeaea;
+  border: 1px solid #fff;
+}
+.btn-contact-phone {
+  background-color: #6283a3 !important;
+  color: #fff !important;
+}
+.faq-button {
+  font-size: 16px;
+  text-align: left !important;
+}
+.faq-button:hover {
+  color: #91a7bd !important;
+  background: #96c142 !important;
+}
+.inner-collapse {
+  color: #337ab7;
+  cursor: pointer;
+  margin: 10px 0;
+}
+.collapse-content p {
+  font-size: 14px;
+}
+.collapse-content li {
+  font-size: 14px;
+}
+.collapse-content td {
+  font-size: 14px;
+}
+.inner-collapse-content {
+  margin-left: 18px;
+}
+.collapse-img {
+  width: 100%;
+}
+.back-to-top {
+  position: fixed;
+  z-index: 1000;
+  bottom: 8px;
+  right: 8px;
+  padding: 8px 12px;
+  opacity: 0.8;
+}
 /* media querries */
 
 @media only screen and (max-width: 950px) {
-  .nav-menu {
+  .custom-nav-menu {
     position: fixed;
     left: -100%;
     top: 4rem;
@@ -290,11 +406,11 @@ footer {
     box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
   }
 
-  .nav-menu.active {
+  .custom-nav-menu.active {
     left: 0;
   }
 
-  .nav-item {
+  .custom-nav-item {
     margin: 2.5rem 0;
   }
 
@@ -327,13 +443,13 @@ footer {
     width: 100%;
     box-shadow: none;
   }
-  .nav-menu {
+  .custom-nav-menu {
     margin-top: 0px;
   }
   .logo-ola {
     display: none;
   }
-  .nav-menu ul {
+  .custom-nav-menu ul {
     flex-direction: column;
   }
   .mobile-bg {
@@ -368,5 +484,8 @@ footer {
   }
   .footer-nav {
     width: 100%;
+  }
+  .arrow {
+    transform: rotate(90deg);
   }
 }
