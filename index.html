@@ -25,6 +25,12 @@
       <div class="logo nav-logo">
         <img src="./assets/logo.webp" class="logo-img" />
       </div>
+
+      <div class="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
       <div class="custom-nav-menu">
         <div>
           <ul class="custom-nav-list">
@@ -49,11 +55,6 @@
         <div>
           <img src="./assets/seal-ola.webp" class="logo-ola" />
         </div>
-      </div>
-      <div class="hamburger">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
       </div>
     </nav>
   </header>
@@ -1128,7 +1129,7 @@
   <script>
     // navbar
     const hamburger = document.querySelector(".hamburger");
-    const navMenu = document.querySelector(".nav-menu");
+    const navMenu = document.querySelector(".custom-nav-menu");
 
     hamburger.addEventListener("click", mobileMenu);
 
@@ -1136,7 +1137,7 @@
       hamburger.classList.toggle("active");
       navMenu.classList.toggle("active");
     }
-    const navLink = document.querySelectorAll(".nav-link");
+    const navLink = document.querySelectorAll(".custom-nav-link");
 
     navLink.forEach((n) => n.addEventListener("click", closeMenu));
 

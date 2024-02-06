@@ -14,6 +14,8 @@
     rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 </head>
 
 <body>
@@ -33,12 +35,14 @@
             <li class="custom-nav-item">
               <a href="#" class="custom-nav-link" data-bs-toggle="modal" data-bs-target="#rates">Rates & Fees</a>
             </li>
-            <li class="custom-nav-item"><a href="#" class="custom-nav-link">FAQs</a></li>
+            <li class="custom-nav-item"><a href="#" class="custom-nav-link" data-bs-toggle="modal"
+                data-bs-target="#faq">FAQs</a></li>
             <li class="custom-nav-item">
               <a href="#" class="custom-nav-link" data-bs-toggle="modal" data-bs-target="#advertising">Advertising
                 disclosure</a>
             </li>
-            <li class="custom-nav-item"><a href="#" class="custom-nav-link">Contact</a></li>
+            <li class="custom-nav-item"><a href="#" class="custom-nav-link" data-bs-toggle="modal"
+                data-bs-target="#contact">Contact</a></li>
           </ul>
         </div>
         <div>
@@ -611,7 +615,7 @@
     <div class="form-container">
       <div class="form next-cards">
         <div>
-          <h2 class="card-heading">What Is Your ZIP Code?</h2>
+          <h2 class="card-heading">What Is Your Monthly Income?</h2>
         </div>
         <br />
         <div class="robert">
@@ -619,15 +623,47 @@
             <img src="/assets/Robert.webp" class="robert-img" />
           </div>
           <div class="robert-question">
-            <p>Let's see what options you have in your area.</p>
+            <p>
+              What is your approximate income before taxes? Please include any
+              additional benefit income including Social Security, Disability,
+              Pension, or other Benefit Source.
+            </p>
           </div>
+        </div>
+        <br />
+        <div>
+          <button class="border-button" onclick="nextPage('page13')">
+            $5000+
+          </button>
+          <button class="border-button" onclick="nextPage('page13')">
+            $4000-$5000
+          </button>
+          <button class="border-button" onclick="nextPage('page13')">
+            $3000-$4000
+          </button>
+          <button class="border-button" onclick="nextPage('page13')">
+            $2000-$2000
+          </button>
+          <button class="border-button" onclick="nextPage('page13')">
+            $1500-$2000
+          </button>
+          <button class="border-button" onclick="nextPage('page13')">
+            $1000-$1500
+          </button>
+          <button class="border-button" onclick="nextPage('page13')">
+            $500-$1000
+          </button>
         </div>
 
         <br />
         <div class="card-buttons">
-          <button class="btn next-btn" onclick="nextPage()">NEXT</button>
+          <button class="btn next-btn" onclick="nextPage('page11')">
+            NEXT
+          </button>
           <br />
-          <button class="btn back-btn" onclick="previousPage()">Back</button>
+          <button class="btn back-btn" onclick="previousPage('page8')">
+            Back
+          </button>
         </div>
         <br />
         <br />
@@ -649,7 +685,9 @@
     <div class="form-container">
       <div class="form next-cards">
         <div>
-          <h2 class="card-heading">What Is Your ZIP Code?</h2>
+          <h2 class="card-heading">
+            What Is Your Benefit Provider's Phone Number?
+          </h2>
         </div>
         <br />
         <div class="robert">
@@ -657,15 +695,31 @@
             <img src="/assets/Robert.webp" class="robert-img" />
           </div>
           <div class="robert-question">
-            <p>Let's see what options you have in your area.</p>
+            <p>In some cases, this number may be used for confirmation</p>
+          </div>
+        </div>
+        <br />
+        <div class="multiple-inputs">
+          <div>
+            <input type="text" id="subInput1" maxlength="3" class="sub-input" placeholder="(XXX)" />
+          </div>
+          <div>
+            <input type="text" id="subInput2" maxlength="3" class="sub-input" placeholder="XXX" />
+          </div>
+          <div>
+            <input type="text" id="subInput3" maxlength="4" class="sub-input" placeholder="XXXX" />
           </div>
         </div>
 
         <br />
         <div class="card-buttons">
-          <button class="btn next-btn" onclick="nextPage()">NEXT</button>
+          <button class="btn next-btn" onclick="nextPage('page10')">
+            NEXT
+          </button>
           <br />
-          <button class="btn back-btn" onclick="previousPage()">Back</button>
+          <button class="btn back-btn" onclick="previousPage('page8')">
+            Back
+          </button>
         </div>
         <br />
         <br />
@@ -687,7 +741,7 @@
     <div class="form-container">
       <div class="form next-cards">
         <div>
-          <h2 class="card-heading">What Is Your ZIP Code?</h2>
+          <h2 class="card-heading">How Long Have You Been Employed?</h2>
         </div>
         <br />
         <div class="robert">
@@ -695,15 +749,32 @@
             <img src="/assets/Robert.webp" class="robert-img" />
           </div>
           <div class="robert-question">
-            <p>Let's see what options you have in your area.</p>
+            <p>How long have you been with your current employer?</p>
           </div>
         </div>
-
+        <br />
+        <div>
+          <button class="border-button" onclick="nextPage('page10')">
+            5 Years or More
+          </button>
+          <button class="border-button" onclick="nextPage('page10')">
+            4 Years
+          </button>
+          <button class="border-button" onclick="nextPage('page10')">
+            3 Years
+          </button>
+          <button class="border-button" onclick="nextPage('page10')">
+            2 Years
+          </button>
+          <button class="border-button" onclick="nextPage('page10')">
+            1 Year or Less
+          </button>
+        </div>
         <br />
         <div class="card-buttons">
-          <button class="btn next-btn" onclick="nextPage()">NEXT</button>
-          <br />
-          <button class="btn back-btn" onclick="previousPage()">Back</button>
+          <button class="btn back-btn" onclick="previousPage('page9')">
+            Back
+          </button>
         </div>
         <br />
         <br />
@@ -725,7 +796,7 @@
     <div class="form-container">
       <div class="form next-cards">
         <div>
-          <h2 class="card-heading">What Is Your ZIP Code?</h2>
+          <h2 class="card-heading">How Are You Paid?</h2>
         </div>
         <br />
         <div class="robert">
@@ -733,15 +804,35 @@
             <img src="/assets/Robert.webp" class="robert-img" />
           </div>
           <div class="robert-question">
-            <p>Let's see what options you have in your area.</p>
+            <p>
+              Individuals who have direct deposit have a higher chance of
+              getting connected with a lender and/or lending partner
+            </p>
           </div>
+        </div>
+        <br />
+        <div>
+          <button class="border-button" onclick="nextPage('page14')">
+            Direct Deposit into Checking
+          </button>
+          <button class="border-button" onclick="nextPage('page15')">
+            Direct Deposit into Savings
+          </button>
+          <button class="border-button" onclick="nextPage('page14')">
+            Paper Check into Checking
+          </button>
+          <button class="border-button" onclick="nextPage('page15')">
+            Paper Check into Savings
+          </button>
         </div>
 
         <br />
         <div class="card-buttons">
-          <button class="btn next-btn" onclick="nextPage()">NEXT</button>
+          <button class="btn back-btn">No Bank Account?</button>
           <br />
-          <button class="btn back-btn" onclick="previousPage()">Back</button>
+          <button class="btn back-btn" onclick="previousPage('page12')">
+            Back
+          </button>
         </div>
         <br />
         <br />
@@ -763,7 +854,7 @@
     <div class="form-container">
       <div class="form next-cards">
         <div>
-          <h2 class="card-heading">What Is Your ZIP Code?</h2>
+          <h2 class="card-heading">How Often Do You Receive Your Income?</h2>
         </div>
         <br />
         <div class="robert">
@@ -771,15 +862,30 @@
             <img src="/assets/Robert.webp" class="robert-img" />
           </div>
           <div class="robert-question">
-            <p>Let's see what options you have in your area.</p>
+            <p>Please tell us how often you receive your income</p>
           </div>
+        </div>
+        <br />
+        <div>
+          <button class="border-button" onclick="nextPage('page15')">
+            Weekly
+          </button>
+          <button class="border-button" onclick="nextPage('page15')">
+            Every 2 Weeks
+          </button>
+          <button class="border-button" onclick="nextPage('page15')">
+            Monthly
+          </button>
+          <button class="border-button" onclick="nextPage('page15')">
+            Twice a Month
+          </button>
         </div>
 
         <br />
         <div class="card-buttons">
-          <button class="btn next-btn" onclick="nextPage()">NEXT</button>
-          <br />
-          <button class="btn back-btn" onclick="previousPage()">Back</button>
+          <button class="btn back-btn" onclick="previousPage('page13')">
+            Back
+          </button>
         </div>
         <br />
         <br />
@@ -801,7 +907,9 @@
     <div class="form-container">
       <div class="form next-cards">
         <div>
-          <h2 class="card-heading">What Is Your ZIP Code?</h2>
+          <h2 class="card-heading">
+            Did You Mean “Checking” As Your Bank Account Type?
+          </h2>
         </div>
         <br />
         <div class="robert">
@@ -809,14 +917,24 @@
             <img src="/assets/Robert.webp" class="robert-img" />
           </div>
           <div class="robert-question">
-            <p>Let's see what options you have in your area.</p>
+            <p>
+              Did you know that Banks are more likely to fund checking
+              accounts rather than savings accounts?
+            </p>
           </div>
+        </div>
+        <br />
+        <div>
+          <button class="border-button" onclick="nextPage('page14')">
+            Change To Checking
+          </button>
+          <button class="border-button" onclick="nextPage('page16')">
+            Continue With Selection
+          </button>
         </div>
 
         <br />
         <div class="card-buttons">
-          <button class="btn next-btn" onclick="nextPage()">NEXT</button>
-          <br />
           <button class="btn back-btn" onclick="previousPage()">Back</button>
         </div>
         <br />
@@ -839,23 +957,32 @@
     <div class="form-container">
       <div class="form next-cards">
         <div>
-          <h2 class="card-heading">What Is Your ZIP Code?</h2>
+          <h2 class="card-heading">When Is Your Next Pay Date?</h2>
         </div>
         <br />
         <div class="robert">
           <div>
             <img src="/assets/Robert.webp" class="robert-img" />
           </div>
+          <br />
           <div class="robert-question">
-            <p>Let's see what options you have in your area.</p>
+            <p>Tell us when you will be getting paid next.</p>
           </div>
+        </div>
+        <br />
+        <div>
+          <input type="date" placeholder="Employer Name" class="input" />
         </div>
 
         <br />
         <div class="card-buttons">
-          <button class="btn next-btn" onclick="nextPage()">NEXT</button>
+          <button class="btn next-btn" onclick="nextPage('page17')">
+            NEXT
+          </button>
           <br />
-          <button class="btn back-btn" onclick="previousPage()">Back</button>
+          <button class="btn back-btn" onclick="previousPage('page15')">
+            Back
+          </button>
         </div>
         <br />
         <br />
@@ -872,6 +999,499 @@
       </div>
     </div>
   </div>
+
+  <div class="form-section" id="page17">
+    <div class="form-container">
+      <div class="form next-cards">
+        <div>
+          <h2 class="card-heading">Are You In The Military?</h2>
+        </div>
+        <br />
+        <div class="robert">
+          <div>
+            <img src="/assets/Robert.webp" class="robert-img" />
+          </div>
+          <br />
+          <div class="robert-question">
+            <p>Only select yes if you are an active-duty service member.</p>
+          </div>
+        </div>
+
+        <br />
+        <div>
+          <button class="border-button" onclick="nextPage('page21')">
+            No
+          </button>
+          <button class="border-button" onclick="nextPage('page21')">
+            Yes
+          </button>
+        </div>
+
+        <br />
+        <div class="card-buttons">
+          <button class="btn back-btn" onclick="previousPage('page15')">
+            Back
+          </button>
+        </div>
+        <br />
+        <br />
+        <div class="card-img">
+          <img src="./assets/ssl.webp" class="ssl-img" />
+        </div>
+        <br />
+        <div class="lock">
+          <i class="fa fa-lock" style="font-size: 16px; color: #000" class="icon"></i>
+          <p class="xs-text">
+            We use 256-bit SSL technology to encrypt your data
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-section" id="page18">
+    <div class="form-container">
+      <div class="form next-cards">
+        <div>
+          <h2 class="card-heading">
+            Do You Have A Vehicle Registered In Your Name?
+          </h2>
+        </div>
+        <br />
+        <div class="robert">
+          <div>
+            <img src="/assets/Robert.webp" class="robert-img" />
+          </div>
+          <br />
+          <div class="robert-question">
+            <p>Do you have a vehicle registered in your name?</p>
+          </div>
+        </div>
+        <br />
+        <div>
+          <button class="border-button" onclick="nextPage('page19')">
+            Yes, It's Paid off
+          </button>
+          <button class="border-button" onclick="nextPage('page19')">
+            Yes - I'm making payments
+          </button>
+          <button class="border-button" onclick="nextPage('page19')">
+            No
+          </button>
+        </div>
+
+        <br />
+        <div class="card-buttons">
+          <button class="btn back-btn" onclick="previousPage('page17')">
+            Back
+          </button>
+        </div>
+        <br />
+        <br />
+        <div class="card-img">
+          <img src="./assets/ssl.webp" class="ssl-img" />
+        </div>
+        <br />
+        <div class="lock">
+          <i class="fa fa-lock" style="font-size: 16px; color: #000" class="icon"></i>
+          <p class="xs-text">
+            We use 256-bit SSL technology to encrypt your data
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-section" id="page19">
+    <div class="form-container">
+      <div class="form next-cards">
+        <div>
+          <h2 class="card-heading">What Is Your Social Security Number?</h2>
+        </div>
+        <br />
+        <div class="robert">
+          <div>
+            <img src="/assets/Robert.webp" class="robert-img" />
+          </div>
+          <br />
+          <div class="robert-question">
+            <p>
+              Your social security number is required for your protection and
+              may be used to confirm your identity.
+            </p>
+          </div>
+        </div>
+        <br />
+        <div class="multiple-inputs">
+          <div>
+            <input type="text" id="subInput1" maxlength="3" class="sub-input" placeholder="- - -" />
+          </div>
+          <div>
+            <input type="text" id="subInput2" maxlength="2" class="sub-input" placeholder="- -" />
+          </div>
+          <div>
+            <input type="text" id="subInput3" maxlength="4" class="sub-input" placeholder="- - - -" />
+          </div>
+        </div>
+
+        <br />
+        <div class="card-buttons">
+          <button class="btn next-btn" onclick="nextPage('page20')">
+            NEXT
+          </button>
+          <br />
+          <button class="btn back-btn" onclick="previousPage('page18')">
+            Back
+          </button>
+        </div>
+        <br />
+        <br />
+        <div class="card-img">
+          <img src="./assets/ssl.webp" class="ssl-img" />
+        </div>
+        <br />
+        <div class="lock">
+          <i class="fa fa-lock" style="font-size: 16px; color: #000" class="icon"></i>
+          <p class="xs-text">
+            We use 256-bit SSL technology to encrypt your data
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-section" id="page20">
+    <div class="form-container">
+      <div class="form next-cards">
+        <div>
+          <h2 class="card-heading">
+            What Is Your Drivers License/State ID Number?
+          </h2>
+        </div>
+        <br />
+        <div class="robert">
+          <div>
+            <img src="/assets/Robert.webp" class="robert-img" />
+          </div>
+          <br />
+          <div class="robert-question">
+            <p>This number is used to verify your identity.</p>
+          </div>
+        </div>
+        <br />
+        <div>
+          <input type="text" placeholder="Drivers License/State ID Number" class="input" />
+        </div>
+
+        <br />
+        <select id="stateSelect" name="state" class="input">
+          <option value="AL">Alabama</option>
+          <option value="AK">Alaska</option>
+          <option value="AZ">Arizona</option>
+          <option value="AR">Arkansas</option>
+          <option value="CA">California</option>
+          <option value="CO">Colorado</option>
+          <option value="CT">Connecticut</option>
+          <option value="DE">Delaware</option>
+          <option value="FL">Florida</option>
+          <option value="GA">Georgia</option>
+          <option value="HI">Hawaii</option>
+          <option value="ID">Idaho</option>
+          <option value="IL">Illinois</option>
+          <option value="IN">Indiana</option>
+          <option value="IA">Iowa</option>
+          <option value="KS">Kansas</option>
+          <option value="KY">Kentucky</option>
+          <option value="LA">Louisiana</option>
+          <option value="ME">Maine</option>
+          <option value="MD">Maryland</option>
+          <option value="MA">Massachusetts</option>
+          <option value="MI">Michigan</option>
+          <option value="MN">Minnesota</option>
+          <option value="MS">Mississippi</option>
+          <option value="MO">Missouri</option>
+          <option value="MT">Montana</option>
+          <option value="NE">Nebraska</option>
+          <option value="NV">Nevada</option>
+          <option value="NH">New Hampshire</option>
+          <option value="NJ">New Jersey</option>
+          <option value="NM">New Mexico</option>
+          <option value="NY">New York</option>
+          <option value="NC">North Carolina</option>
+          <option value="ND">North Dakota</option>
+          <option value="OH">Ohio</option>
+          <option value="OK">Oklahoma</option>
+          <option value="OR">Oregon</option>
+          <option value="PA">Pennsylvania</option>
+          <option value="RI">Rhode Island</option>
+          <option value="SC">South Carolina</option>
+          <option value="SD">South Dakota</option>
+          <option value="TN">Tennessee</option>
+          <option value="TX">Texas</option>
+          <option value="UT">Utah</option>
+          <option value="VT">Vermont</option>
+          <option value="VA">Virginia</option>
+          <option value="WA">Washington</option>
+          <option value="WV">West Virginia</option>
+          <option value="WI">Wisconsin</option>
+          <option value="WY">Wyoming</option>
+        </select>
+        <br />
+
+        <br />
+        <div class="card-buttons">
+          <button class="btn next-btn" onclick="nextPage('page22')">
+            NEXT
+          </button>
+          <br />
+          <button class="btn back-btn" onclick="previousPage('page18')">
+            Back
+          </button>
+        </div>
+        <br />
+        <br />
+        <div class="card-img">
+          <img src="./assets/ssl.webp" class="ssl-img" />
+        </div>
+        <br />
+        <div class="lock">
+          <i class="fa fa-lock" style="font-size: 16px; color: #000" class="icon"></i>
+          <p class="xs-text">
+            We use 256-bit SSL technology to encrypt your data
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-section" id="page21">
+    <div class="form-container">
+      <div class="form next-cards">
+        <div>
+          <h2 class="card-heading">How Much Credit Card Debt Do You Have?</h2>
+        </div>
+        <br />
+        <br />
+        <div>
+          <button class="border-button" onclick="nextPage('page18')">
+            I jave No Debt
+          </button>
+          <button class="border-button" onclick="nextPage('page18')">
+            Under $7,500
+          </button>
+          <button class="border-button" onclick="nextPage('page18')">
+            $7,500-$10,000
+          </button>
+          <button class="border-button" onclick="nextPage('page18')">
+            $10,000-$15,000
+          </button>
+          <button class="border-button" onclick="nextPage('page18')">
+            $15,000-$20,000
+          </button>
+          <button class="border-button" onclick="nextPage('page18')">
+            More Than 20,000
+          </button>
+        </div>
+
+        <br />
+        <div class="card-buttons">
+          <button class="btn back-btn" onclick="previousPage('page17')">
+            Back
+          </button>
+        </div>
+        <br />
+        <br />
+        <div class="card-img">
+          <img src="./assets/ssl.webp" class="ssl-img" />
+        </div>
+        <br />
+        <div class="lock">
+          <i class="fa fa-lock" style="font-size: 16px; color: #000" class="icon"></i>
+          <p class="xs-text">
+            We use 256-bit SSL technology to encrypt your data
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-section" id="page22">
+    <div class="form-container">
+      <div class="form next-cards">
+        <div>
+          <h2 class="card-heading">
+            How Long Have You Lived At Your Residence?
+          </h2>
+        </div>
+        <br />
+        <div class="robert">
+          <div>
+            <img src="/assets/Robert.webp" class="robert-img" />
+          </div>
+          <br />
+          <div class="robert-question">
+            <p>Tell us how long you have lived at your current residence.</p>
+          </div>
+        </div>
+        <br />
+        <div>
+          <button class="border-button" onclick="nextPage('page23')">
+            1 year Or Less
+          </button>
+          <button class="border-button" onclick="nextPage('page23')">
+            2 Years
+          </button>
+          <button class="border-button" onclick="nextPage('page23')">
+            3 Years
+          </button>
+          <button class="border-button" onclick="nextPage('page23')">
+            4 Years
+          </button>
+          <button class="border-button" onclick="nextPage('page23')">
+            5 Years Or More
+          </button>
+        </div>
+
+        <br />
+        <div class="card-buttons">
+          <button class="btn back-btn" onclick="previousPage('page20')">
+            Back
+          </button>
+        </div>
+        <br />
+        <br />
+        <div class="card-img">
+          <img src="./assets/ssl.webp" class="ssl-img" />
+        </div>
+        <br />
+        <div class="lock">
+          <i class="fa fa-lock" style="font-size: 16px; color: #000" class="icon"></i>
+          <p class="xs-text">
+            We use 256-bit SSL technology to encrypt your data
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-section" id="page23">
+    <div class="form-container">
+      <div class="form next-cards">
+        <div>
+          <h2 class="card-heading">
+            How Long Have You Had Your Bank Account Open?
+          </h2>
+        </div>
+        <br />
+        <div class="robert">
+          <div>
+            <img src="/assets/Robert.webp" class="robert-img" />
+          </div>
+          <br />
+          <div class="robert-question">
+            <p>How long have you had this bank account?</p>
+          </div>
+        </div>
+        <br />
+        <div>
+          <button class="border-button" onclick="nextPage('page24')">
+            1 year Or Less
+          </button>
+          <button class="border-button" onclick="nextPage('page24')">
+            2 Years
+          </button>
+          <button class="border-button" onclick="nextPage('page24')">
+            3 Years
+          </button>
+          <button class="border-button" onclick="nextPage('page24')">
+            4 Years
+          </button>
+          <button class="border-button" onclick="nextPage('page24')">
+            5 Years Or More
+          </button>
+        </div>
+
+        <br />
+        <div class="card-buttons">
+          <button class="btn back-btn" onclick="previousPage('page23')">
+            Back
+          </button>
+        </div>
+        <br />
+        <br />
+        <div class="card-img">
+          <img src="./assets/ssl.webp" class="ssl-img" />
+        </div>
+        <br />
+        <div class="lock">
+          <i class="fa fa-lock" style="font-size: 16px; color: #000" class="icon"></i>
+          <p class="xs-text">
+            We use 256-bit SSL technology to encrypt your data
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-section" id="page24">
+    <div class="form-container">
+      <div class="form next-cards">
+        <div>
+          <h2 class="card-heading">Bank Information</h2>
+        </div>
+        <br />
+        <div class="robert">
+          <div>
+            <img src="/assets/Robert.webp" class="robert-img" />
+          </div>
+          <br />
+          <div class="robert-question">
+            <p>Where would you like the funds deposited?</p>
+          </div>
+        </div>
+        <br />
+        <div>
+          <input type="text" placeholder="Routing" class="input" />
+        </div>
+        <br />
+        <div>
+          <input type="text" placeholder="Account" class="input" />
+        </div>
+        <br />
+        <div>
+          <input type="text" placeholder="Bank Name" class="input" />
+        </div>
+        <br />
+        <div>
+          <img src="./assets/Check.webp" class="input-image" />
+        </div>
+
+        <br />
+        <div class="card-buttons">
+          <button class="btn next-btn" onclick="previousPage('page1')">
+            Next
+          </button>
+          <br />
+          <button class="btn back-btn" onclick="previousPage('page23')">
+            Back
+          </button>
+        </div>
+        <br />
+        <br />
+        <div class="card-img">
+          <img src="./assets/ssl.webp" class="ssl-img" />
+        </div>
+        <br />
+        <div class="lock">
+          <i class="fa fa-lock" style="font-size: 16px; color: #000" class="icon"></i>
+          <p class="xs-text">
+            We use 256-bit SSL technology to encrypt your data
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <footer>
     <div class="footer-nav">
       <ul>
@@ -899,7 +1519,861 @@
       </p>
     </div>
   </footer>
+  <div>
+    <!-- How It works Modal -->
+    <div>
+      <div class="modal fade" id="howItWorks" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title modal-title-custom" id="exampleModalLabel">How It Works</h5>
+              <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                ×
+              </button>
+            </div>
+            <div class="modal-body">
+              <p>
+                When you need cash now, with no resolution in sight, a payday loan or cash advance can be the answer to
+                your problems. Our process is simple, safe, secure, and convenient:
+              </p>
+              <ul>
+                <li>
+                  Fill out our short, secure online loan request and submit. Our network of lenders will then review
+                  your information to see if they can offer you a loan.
+                </li>
+                <li>
+                  If approved by a lender, you will be presented with your loan details and documents for review.
+                </li>
+                <li>
+                  Review your online loan documents and retain a copy. You may be required to electronically e-sign your
+                  agreem
+                </li>
+                <li>
+
+                  Your loan will then be deposited directly into your bank account, typically within one business day.
+                </li>
+              </ul>
+              <h5 class="modal-title modal-title-custom mb-2" id="exampleModalLabel">Qualifying for a Loan
+              </h5>
+              <p>
+                Although your loan request may be accepted with any type of credit, there are still a few basic
+                requirements you must meet in order to qualify.
+              </p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-bs-dismiss="modal">Close</button>
+              <!-- You can add additional buttons here -->
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Rates & Fees Modal -->
+    <div>
+      <div class="modal fade" id="rates" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title modal-title-custom" id="exampleModalLabel">Rates & Fees</h5>
+              <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                ×
+              </button>
+            </div>
+            <div class="modal-body">
+              <p>
+                Terms of your loan will vary based on the amount of the loan and the period of time to repay. Other
+                factors may include the state you live in, your source of income, and your repayment history. Please
+                contact your lender directly for questions regarding your loan.
+              </p>
+              <p>Rates:</p>
+              <table class="ratesandfees-example">
+                <tbody>
+                  <tr>
+                    <td class="ratesandfees-example-left" valign="top">Loan Amount</td>
+                    <td class="ratesandfees-example-right" valign="top">$100 - $1,000+</td>
+                  </tr>
+                  <tr>
+                    <td class="ratesandfees-example-left" valign="top">Lending Period</td>
+                    <td class="ratesandfees-example-right" valign="top">14 days - 24 months</td>
+                  </tr>
+                  <tr>
+                    <td class="ratesandfees-example-left" valign="top">Payment Frequency</td>
+                    <td class="ratesandfees-example-right" valign="top">Ranges between weekly, bi-weekly, monthly, or
+                      bi-monthly.</td>
+                  </tr>
+                  <tr>
+                    <td class="ratesandfees-example-left" valign="top">Annual Percentage Rate (APR) &nbsp;</td>
+                    <td class="ratesandfees-example-right" valign="top">Typically between 261% - 1304%</td>
+                  </tr>
+                  <tr>
+                    <td class="ratesandfees-example-left" valign="top">Prepayment Penalty</td>
+                    <td class="ratesandfees-example-right" valign="top">None</td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <p>
+                Typically, the APRs for most loans can range between 261% to 1304% based on many different factors
+                including, but not limited to: loan amount, loan duration, credit scoring, and state of residence.
+              </p>
+              <p>
+                Below is a representation of the typical APR range you can expect to see.
+              </p>
+
+              <table class="ratesandfees-apr-table w-100">
+                <tbody>
+                  <tr class="ratesandfees-apr-line1">
+                    <td class="ratesandfees-apr-header" valign="top"></td>
+                    <td class="ratesandfees-apr-header" valign="top">Loan Amount</td>
+                    <td class="ratesandfees-apr-header" valign="top">Loan Term</td>
+                    <td class="ratesandfees-apr-header" valign="top">Fee / Interest</td>
+                    <td class="ratesandfees-apr-header" valign="top">APR%</td>
+                  </tr>
+                  <tr class="ratesandfees-apr-line2">
+                    <td class="ratesandfees-apr-left" valign="top">Low Range</td>
+                    <td class="ratesandfees-apr" valign="middle">$ 1,000</td>
+                    <td class="ratesandfees-apr" valign="middle">14 days</td>
+                    <td class="ratesandfees-apr" valign="middle">$ 100</td>
+                    <td class="ratesandfees-apr" valign="middle">261%</td>
+                  </tr>
+                  <tr class="ratesandfees-apr-line3">
+                    <td class="ratesandfees-apr-left" valign="top">High Range</td>
+                    <td class="ratesandfees-apr" valign="middle">$ 300</td>
+                    <td class="ratesandfees-apr" valign="middle">14 days</td>
+                    <td class="ratesandfees-apr" valign="middle">$ 150</td>
+                    <td class="ratesandfees-apr" valign="middle">1304%</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Advertising Disclosure Modal -->
+    <div>
+      <div class="modal fade" id="advertising" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title modal-title-custom" id="exampleModalLabel">How It Works</h5>
+              <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                ×
+              </button>
+            </div>
+            <div class="modal-body">
+              <p>
+                THE OPERATOR OF THIS WEBSITE is a for-profit advertising network. We receive compensation, in the form
+                of referral fees, from lenders, aggregators, credit repair services, or other offers that we direct you
+                to. Therefore, the amount of compensation provided, along with other factors, may impact which offer you
+                are presented. The offer you receive may be coming from the company that bid the most for your
+                information. The operator of this website does not always provide you with an offer with the best rates
+                or terms. Our website does not include all companies or all available offers. We encourage you to
+                research all available loans options for your situation.
+              </p>
+              <p>
+                * The operator of this website does not broker loans to lenders and does not make cash advances or
+                credit decisions. This Website does not constitute an offer or solicitation to lend. This site will
+                submit the information you provide to a lender. In some cases, you may be given the option of obtaining
+                a loan from a tribal lender. Tribal lenders are subject to tribal and certain federal laws while being
+                immune from state law including usury caps. If you are connected to a tribal lender, please understand
+                that the rates and fees may be higher than state-licensed lenders and you may be required to agree to
+                resolve any disputes in a tribal jurisdiction. Additionally, your information may be going to an
+                aggregator and not a lender. Your information can be sold multiple times leading to multiple offers from
+                lenders, aggregators, and other marketers. Providing your information on this Website does not guarantee
+                that you will be approved for a cash advance. The operator of this Website is not an agent,
+                representative or broker of any lender and does not endorse or charge you for any service or product.
+                Not all lenders can provide up to $2,500. Cash transfer times may vary between lenders and may depend on
+                your individual financial institution. In some circumstances faxing may be required. This service is not
+                available in all states, and the states serviced by this Website may change from time to time and
+                without notice. For details, questions or concerns regarding your cash advance, please contact your
+                lender directly. Cash advances are meant to provide you with short term financing to solve immediate
+                cash needs and should not be considered a long term solution. Residents of some states may not be
+                eligible for a cash advance based upon lender requirements.
+              </p>
+              <p>
+                ** Lenders may perform credit checks with the three credit reporting bureaus: Experian, Equifax, or
+                TransUnion. Credit checks or consumer reports through alternative providers may be obtained by some
+                lenders.
+              </p>
+              <p>ANTI-SPAM POLICY: We strictly prohibit any reference or advertisement of our brand and web site using
+                unsolicited email messages. Violation of this policy will cause partnership termination and further
+                actions permitted by the law. If you feel you have been sent unsolicited messages promoting our brand or
+                website and would like to register a complaint, please refer to our Privacy Policy. We will investigate
+                all complaints and take necessary action.</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-bs-dismiss="modal">Close</button>
+              <!-- You can add additional buttons here -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Contact Modal -->
+    <div>
+      <div class="modal fade" id="contact" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title modal-title-custom" id="exampleModalLabel">Contact Us</h5>
+              <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                ×
+              </button>
+            </div>
+            <div class="modal-body">
+              <p class="m-0">
+                If you still have questions after reading our Frequently Asked Questions section, please do not hesitate
+                to contact us below.
+              </p>
+
+              <div class="d-flex flex-column align-items-center my-3 gap-2">
+                <p class="m-0">To contact customer service:</p>
+                <a class="btn btn-contact-phone no-wrap" href="tel:8559997852">Call (855)
+                  999-7852</a>
+              </div>
+              <p>
+                Please note that we are not a lender. Any questions pertaining to your loan should be directed to your
+                lender; we have no information on your loan, your pending request, or your rates and fees.
+              </p>
+              <p>
+                To stop receiving marketing emails, <a href="#" data-bs-toggle="modal"
+                  data-bs-target="#unsubEmail">click
+                  here.</a>
+              </p>
+              <p class="m-0">Company Name: Net Media1, LLC</p>
+              <p>Address: 2093 Philadelphia Pike, Suite 1422, Claymont, DE 19703</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-bs-dismiss="modal">Close</button>
+              <!-- You can add additional buttons here -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Unsubscribe Email Modal -->
+    <div>
+      <div class="modal fade" id="unsubEmail" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title modal-title-custom" id="exampleModalLabel">Remove Me</h5>
+              <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                ×
+              </button>
+            </div>
+            <div class="modal-body">
+              <p class="m-0">
+                Enter your email address below to unsubscribe:
+              </p>
+              <input type="email" class="form-control mt-2" id="exampleInputEmail1" aria-describedby="emailHelp">
+              <div class="d-flex justify-content-center my-3 gap-2">
+                <button type="button" class="btn btn-default" data-bs-dismiss="modal">Unsubscribe</button>
+              </div>
+              <div>
+                <p>To unsubscribe from SMS text messages, <a href="#" data-bs-toggle="modal" data-bs-target="#unsubSMS">
+                    click
+                    here.</a>
+                </p>
+                </p>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-bs-dismiss="modal">Close</button>
+              <!-- You can add additional buttons here -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Unsubscribe SMS Modal -->
+    <div>
+      <div class="modal fade" id="unsubSMS" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title modal-title-custom" id="exampleModalLabel">Remove Me</h5>
+              <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                ×
+              </button>
+            </div>
+            <div class="modal-body">
+              <p class="m-0">
+                Enter your cell phone number to unsubscribe from SMS text messages:
+              </p>
+              <div class="multiple-inputs">
+                <div>
+                  <input type="text" id="subInput1" maxlength="3" class="sub-input" placeholder="- - -" />
+                </div>
+                <div>
+                  <input type="text" id="subInput2" maxlength="4" class="sub-input" placeholder="- - - -" />
+                </div>
+                <div>
+                  <input type="text" id="subInput3" maxlength="4" class="sub-input" placeholder="- - - -" />
+                </div>
+              </div>
+              <div class="d-flex justify-content-center my-3 gap-2">
+                <button type="button" class="btn btn-default" data-bs-dismiss="modal">Unsubscribe</button>
+              </div>
+              <div>
+                <p>To unsubscribe from email messages, <a href="#" data-bs-toggle="modal" data-bs-target="#unsubEmail">
+                    click
+                    here.</a>
+                </p>
+                </p>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-bs-dismiss="modal">Close</button>
+              <!-- You can add additional buttons here -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- FAQ Modal -->
+    <div>
+      <div class="modal fade" id="faq" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title modal-title-custom" id="exampleModalLabel">Frequently Asked Questions</h5>
+              <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                ×
+              </button>
+            </div>
+            <div class="modal-body">
+              <div id="accordion" class="d-flex flex-column gap-1">
+                <div class="card">
+
+                  <button class="btn card-header faq-button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+                    aria-expanded="true" aria-controls="collapseOne">
+                    What is a Payday Loan or Cash Advance?
+                  </button>
+
+
+                  <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-bs-parent="#accordion">
+                    <div class="card-body collapse-content">
+                      <p>
+                        A payday loan provides you with emergency cash when you need it most ... Simply complete our
+                        quick
+                        two-minute online form; there are typically no documents to fax. Just submit your request and
+                        your
+                        cash can be available as early as the next business day!
+                      </p>
+                      <div>
+                        <p class="inner-collapse" data-bs-toggle="collapse" data-bs-target="#paydayCollapse"
+                          aria-expanded="true" aria-controls="paydayCollapse">Can I use my loan funds for any purpose?
+                        </p>
+                        <div id="paydayCollapse" class="collapse inner-collapse-content">
+                          <p>Absolutely, you can use the money from your loan for any purpose.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <button class="btn card-header faq-button" data-bs-toggle="collapse" data-bs-target="#collapseTwo"
+                    aria-expanded="true" aria-controls="collapseOne">
+                    Qualifying for a Loan
+                  </button>
+                  <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-bs-parent="#accordion">
+                    <div class="card-body collapse-content">
+
+                      <div>
+                        <p class="inner-collapse" data-bs-toggle="collapse" data-bs-target="#loan-1"
+                          aria-expanded="true" aria-controls="loan-1"><i class="fa-solid fa-circle-arrow-down"></i> Can
+                          I qualify?
+                        </p>
+                        <div id="loan-1" class="collapse inner-collapse-content">
+                          <p>To qualify for a loan you must:</p>
+                          <ul>
+                            <li>Have a job OR receive regular income</li>
+                            <li>Be 18 years or older</li>
+                            <li>Be a U.S. citizen with a valid social security number</li>
+                            <li>Have a valid U.S. driver’s license or state ID</li>
+                            <li>Have an open bank account (your cash will be deposited directly into this account)</li>
+                            <li>Meet any additional requirements your lender may have (which may include credit score,
+                              loan history, and state of residence)</li>
+                          </ul>
+                        </div>
+                        <p class="inner-collapse" data-bs-toggle="collapse" data-bs-target="#loan-2"
+                          aria-expanded="true" aria-controls="loan-2">How much can I qualify for?
+                        </p>
+                        <div id="loan-2" class="collapse inner-collapse-content">
+                          <p>You can request up to $2,500 to find a loan you're qualified to receive, fill out our
+                            simple loan request. Your lender will take into account the information you enter, such as
+                            income and employment, as well as any additional information they may require, including,
+                            but not limited to, your credit history.</p>
+
+                        </div>
+                        <p class="inner-collapse" data-bs-toggle="collapse" data-bs-target="#loan-3"
+                          aria-expanded="true" aria-controls="loan-3">How can I increase my chances of getting approved?
+                        </p>
+                        <div id="loan-3" class="collapse">
+                          <ul>
+                            <li>Make sure all the information you enter is accurate.
+                            </li>
+                            <li>If you don't have a bank account, open a checking account and have your paycheck
+                              deposited directly into that account. This provides a lender the ability to deposit funds
+                              directly into your account.
+                            </li>
+                            <li>If you currently have outstanding short-term loans, paying those off may help your
+                              approval for a new loan.
+                            </li>
+
+                          </ul>
+
+                        </div>
+                        <p class="inner-collapse" data-bs-toggle="collapse" data-bs-target="#loan-4"
+                          aria-expanded="true" aria-controls="loan-4">What if I don’t have a bank account?
+                        </p>
+                        <div id="loan-4" class="collapse inner-collapse-content">
+                          <p>You must have a bank account (either checking or savings are valid) to be able to receive
+                            your loan.</p>
+
+                        </div>
+                        <p class="inner-collapse" data-bs-toggle="collapse" data-bs-target="#loan-5"
+                          aria-expanded="true" aria-controls="loan-5">I have a Meta Bank account. Can I still be
+                          approved?
+                        </p>
+                        <div id="loan-5" class="collapse inner-collapse-content">
+                          <p>In most cases, customers with Meta Bank accounts are not eligible for a loan.</p>
+
+                        </div>
+                        <p class="inner-collapse" data-bs-toggle="collapse" data-bs-target="#loan-6"
+                          aria-expanded="true" aria-controls="loan-6">I don’t have a job, but I receive income from
+                          disability, retirement, social security or pension payments. Can I still get a loan?
+                        </p>
+                        <div id="loan-6" class="collapse inner-collapse-content">
+                          <p>Yes—some lenders may still accept your loan request if you receive regular benefits income
+                            (at least $1000 monthly).</p>
+                        </div>
+                        <p class="inner-collapse" data-bs-toggle="collapse" data-bs-target="#loan-7"
+                          aria-expanded="true" aria-controls="loan-7">I don’t have a driver’s license. Can I still
+                          qualify?
+                        </p>
+                        <div id="loan-7" class="collapse inner-collapse-content">
+                          <p>At this time, lenders require a driver’s license or state ID card to help verify identity
+                            (passports are not accepted).</p>
+                        </div>
+                        <p class="inner-collapse" data-bs-toggle="collapse" data-bs-target="#loan-8"
+                          aria-expanded="true" aria-controls="loan-8">I live outside the United States. Can I get a
+                          loan?
+                        </p>
+                        <div id="loan-8" class="collapse inner-collapse-content">
+                          <p>Currently, our network of lenders only provide loans to residents of the United States.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <button class="btn card-header faq-button" data-bs-toggle="collapse" data-bs-target="#collapseThree"
+                    aria-expanded="true" aria-controls="collapseThree">
+                    The Loan Request Process
+                  </button>
+                  <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-bs-parent="#accordion">
+                    <div class="card-body collapse-content">
+
+                      <div>
+                        <p class="inner-collapse" data-bs-toggle="collapse" data-bs-target="#loan-1"
+                          aria-expanded="true" aria-controls="loan-1">How does the loan request process work?
+                        </p>
+                        <div id="loan-1" class="collapse inner-collapse-content">
+                          <p>We are not a lender; instead, we provide a marketplace for lenders and consumers to come
+                            together. Our process is simple and secure:
+
+                          </p>
+                          <ul>
+                            <li>Fill out our short, secure online loan request and submit. Our network of lenders will
+                              then review your information to see if they can offer you a loan.</li>
+                            <li>If approved by a lender, you will be presented with your loan details and documents for
+                              review.</li>
+                            <li>Review your online loan documents and retain a copy. You may be required to
+                              electronically e-sign your agreement.</li>
+                            <li>Your loan will then be deposited directly into your bank account, typically within one
+                              business day.</li>
+
+                          </ul>
+                        </div>
+                        <p class="inner-collapse" data-bs-toggle="collapse" data-bs-target="#loan-2"
+                          aria-expanded="true" aria-controls="loan-2">How long does the approval process take?
+                        </p>
+                        <div id="loan-2" class="collapse inner-collapse-content">
+                          <p>Your loan request should take just a few minutes to complete. Upon completion your loan
+                            request may be approved within minutes. If approved, your funds can be available as soon as
+                            the next business day.</p>
+
+                        </div>
+                        <p class="inner-collapse" data-bs-toggle="collapse" data-bs-target="#loan-3"
+                          aria-expanded="true" aria-controls="loan-3">Where do I find my bank account and routing
+                          number?
+                        </p>
+                        <div id="loan-3" class="collapse inner-collapse-content">
+                          <p>Your bank account number and routing number can be found at the bottom of your check (see
+                            an example below). Your account number is a unique number given to you by your bank that
+                            represents your checking or savings account. Your routing number is a public number that is
+                            associated with your bank.</p>
+                          <img src="./assets/check-account.webp" alt="" class="collapse-img">
+                        </div>
+                        <p class="inner-collapse" data-bs-toggle="collapse" data-bs-target="#loan-4"
+                          aria-expanded="true" aria-controls="loan-4">I’m having technical trouble with your loan
+                          request.
+                        </p>
+                        <div id="loan-4" class="collapse inner-collapse-content">
+                          <p>You may need to update your browser or switch to another browser.</p>
+
+                        </div>
+                        <p class="inner-collapse" data-bs-toggle="collapse" data-bs-target="#loan-5"
+                          aria-expanded="true" aria-controls="loan-5">Why do you need my social security number and bank
+                          account information?
+                        </p>
+                        <div id="loan-5" class="collapse inner-collapse-content">
+                          <p>Your social security number is required for the your protection and is used to help verify
+                            your identity. Your bank account information is needed to deposit your funds into your
+                            account.
+
+                          </p>
+
+                        </div>
+                        <p class="inner-collapse" data-bs-toggle="collapse" data-bs-target="#loan-6"
+                          aria-expanded="true" aria-controls="loan-6">When do I get my funds?
+
+                        </p>
+                        <div id="loan-6" class="collapse inner-collapse-content">
+                          <p>Once you’ve submitted your loan request your funds
+                            are typically deposited into your bank account within one business day.</p>
+                        </div>
+
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <button class="btn card-header faq-button" data-bs-toggle="collapse" data-bs-target="#collapseFour"
+                    aria-expanded="true" aria-controls="collapseFour">
+                    Rates & Fees
+                  </button>
+                  <div id="collapseFour" class="collapse" aria-labelledby="headingThree" data-bs-parent="#accordion">
+                    <div class="card-body collapse-content">
+
+                      <div>
+                        <p class="inner-collapse" data-bs-toggle="collapse" data-bs-target="#loan-1"
+                          aria-expanded="true" aria-controls="loan-1">What are the rates and fees?
+                        </p>
+                        <div id="loan-1" class="collapse inner-collapse-content">
+                          <p>Terms of your loan will vary based on the amount of the loan and the period of time to
+                            repay. Other factors may include the state you live in, your source of income, and your
+                            repayment history. Please contact your lender directly for questions regarding your loan.
+                          </p>
+                          <p>Rates:</p>
+                          <table class="ratesandfees-example">
+                            <tbody>
+                              <tr>
+                                <td class="ratesandfees-example-left" valign="top">Loan Amount</td>
+                                <td class="ratesandfees-example-right" valign="top">$100 - $1,000+</td>
+                              </tr>
+                              <tr>
+                                <td class="ratesandfees-example-left" valign="top">Lending Period</td>
+                                <td class="ratesandfees-example-right" valign="top">14 days - 24 months</td>
+                              </tr>
+                              <tr>
+                                <td class="ratesandfees-example-left" valign="top">Payment Frequency</td>
+                                <td class="ratesandfees-example-right" valign="top">Ranges between weekly, bi-weekly,
+                                  monthly, or
+                                  bi-monthly.</td>
+                              </tr>
+                              <tr>
+                                <td class="ratesandfees-example-left" valign="top">Annual Percentage Rate (APR) &nbsp;
+                                </td>
+                                <td class="ratesandfees-example-right" valign="top">Typically between 261% - 1304%</td>
+                              </tr>
+                              <tr>
+                                <td class="ratesandfees-example-left" valign="top">Prepayment Penalty</td>
+                                <td class="ratesandfees-example-right" valign="top">None</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                          <p>
+                            Typically, the APRs for most loans can range between 261% to 1304% based on many different
+                            factors
+                            including, but not limited to: loan amount, loan duration, credit scoring, and state of
+                            residence.
+                          </p>
+                          <p>
+                            Below is a representation of the typical APR range you can expect to see.
+                          </p>
+
+                          <table class="ratesandfees-apr-table w-100">
+                            <tbody>
+                              <tr class="ratesandfees-apr-line1">
+                                <td class="ratesandfees-apr-header" valign="top"></td>
+                                <td class="ratesandfees-apr-header" valign="top">Loan Amount</td>
+                                <td class="ratesandfees-apr-header" valign="top">Loan Term</td>
+                                <td class="ratesandfees-apr-header" valign="top">Fee / Interest</td>
+                                <td class="ratesandfees-apr-header" valign="top">APR%</td>
+                              </tr>
+                              <tr class="ratesandfees-apr-line2">
+                                <td class="ratesandfees-apr-left" valign="top">Low Range</td>
+                                <td class="ratesandfees-apr" valign="middle">$ 1,000</td>
+                                <td class="ratesandfees-apr" valign="middle">14 days</td>
+                                <td class="ratesandfees-apr" valign="middle">$ 100</td>
+                                <td class="ratesandfees-apr" valign="middle">261%</td>
+                              </tr>
+                              <tr class="ratesandfees-apr-line3">
+                                <td class="ratesandfees-apr-left" valign="top">High Range</td>
+                                <td class="ratesandfees-apr" valign="middle">$ 300</td>
+                                <td class="ratesandfees-apr" valign="middle">14 days</td>
+                                <td class="ratesandfees-apr" valign="middle">$ 150</td>
+                                <td class="ratesandfees-apr" valign="middle">1304%</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                        <p class="inner-collapse" data-bs-toggle="collapse" data-bs-target="#loan-2"
+                          aria-expanded="true" aria-controls="loan-2">How much will my loan cost?
+                        </p>
+                        <div id="loan-2" class="collapse inner-collapse-content">
+                          <p>Your rates and fees are completely dependent on the terms offered by your lender. Factors
+                            that can contribute to determining your terms may include the state you live in, the amount
+                            of money loaned, the length of repayment time, and your credit history. Late or missing
+                            payments can result in additional charges that can increase the overall cost of your loan.
+                          </p>
+
+                        </div>
+                        <p class="inner-collapse" data-bs-toggle="collapse" data-bs-target="#loan-3"
+                          aria-expanded="true" aria-controls="loan-3">What is APR?
+                        </p>
+                        <div id="loan-3" class="collapse inner-collapse-content">
+                          <p>APR stands for Annual Percentage Rate and is meant to represent an interest rate for an
+                            entire year. This is a good way to compare long term loan products like mortgage loans, auto
+                            loans, and other loans scheduled to pay-off in 12 months or more. Using an APR to represent
+                            a short-term loan can be misleading and is not a good way to compare all loan products.
+                            Annualizing other fees over a two week span, typical of short-term loans, can show just how
+                            affordable these loans can be.</p>
+                        </div>
+                        <p class="inner-collapse" data-bs-toggle="collapse" data-bs-target="#loan-4"
+                          aria-expanded="true" aria-controls="loan-4">Can I review the terms of the loan before I
+                          accept?
+                        </p>
+                        <div id="loan-4" class="collapse inner-collapse-content">
+                          <p>Yes, your lender should provide you access to review all of your loan documents before you
+                            sign them. Please retain a copy of your loan documents and records. Up until you submit your
+                            signed loan agreement, you have the right to reject the loan offer and request a loan again.
+                          </p>
+
+                        </div>
+
+
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <button class="btn card-header faq-button" data-bs-toggle="collapse" data-bs-target="#collapseFive"
+                    aria-expanded="true" aria-controls="collapseFive">
+                    Repaying My Loan
+                  </button>
+                  <div id="collapseFive" class="collapse" aria-labelledby="headingThree" data-bs-parent="#accordion">
+                    <div class="card-body collapse-content">
+
+                      <div>
+                        <p class="inner-collapse" data-bs-toggle="collapse" data-bs-target="#loan-1"
+                          aria-expanded="true" aria-controls="loan-1">What are the repayment terms?
+                        </p>
+                        <div id="loan-1" class="collapse inner-collapse-content">
+                          <p>Repayment terms are dependent upon your lender, and may be dependent upon such factors as
+                            the state you live in, the amount of the loan, the length of repayment time, and your credit
+                            history. Typically, payments are made once or twice a month. Please contact your lender with
+                            any questions about the repayment process.
+                          </p>
+
+                        </div>
+                        <p class="inner-collapse" data-bs-toggle="collapse" data-bs-target="#loan-2"
+                          aria-expanded="true" aria-controls="loan-2">What are my loan renewal policies?
+                        </p>
+                        <div id="loan-2" class="collapse inner-collapse-content">
+                          <p>Renewal policies vary for each company and within each loan offer. It is essential to
+                            review these policies and terms within your individual loan.
+                          </p>
+
+                        </div>
+                        <p class="inner-collapse" data-bs-toggle="collapse" data-bs-target="#loan-3"
+                          aria-expanded="true" aria-controls="loan-3">What if I make a payment late, or miss a payment?
+                          What's a rolled over payment?
+                        </p>
+                        <div id="loan-3" class="collapse inner-collapse-content">
+                          <p>If you think you will be unable to make a payment on time (or at all), contact your lender
+                            immediately. Failure to meet the terms of your loan can result in additional fees,
+                            collection procedures, and/or a detrimental change to your credit rating. For some loans, if
+                            you do not pay the loan balance in full, depending on your specific lender, your loan may
+                            renew or roll over the principal balance plus an additional finance fee.</p>
+                        </div>
+                        <p class="inner-collapse" data-bs-toggle="collapse" data-bs-target="#loan-4"
+                          aria-expanded="true" aria-controls="loan-4">How does requesting a short-term loan affect my
+                          credit?
+                        </p>
+                        <div id="loan-4" class="collapse inner-collapse-content">
+                          <p>Lenders may perform credit checks with the three credit reporting bureaus: Experian,
+                            Equifax, or TransUnion. Credit checks or consumer reports through alternative providers may
+                            be obtained by some lenders. Please check with your participating lender.
+                          </p>
+
+                        </div>
+                        <p class="inner-collapse" data-bs-toggle="collapse" data-bs-target="#loan-5"
+                          aria-expanded="true" aria-controls="loan-5">What collection practices are used?
+                        </p>
+                        <div id="loan-5" class=" collapse inner-collapse-content">
+                          <p>Collections practices of lenders and/or any assignee(s) will be in accordance with the
+                            principles of any applicable federal and state law. Lenders may attempt to contact borrowers
+                            via one or more authorized methods, including phone calls and emails, to arrange for
+                            payment.
+                          </p>
+
+                        </div>
+
+
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <button class="btn card-header faq-button" data-bs-toggle="collapse" data-bs-target="#collapseSix"
+                    aria-expanded="true" aria-controls="collapseSix">
+                    More Information
+                  </button>
+                  <div id="collapseSix" class="collapse" aria-labelledby="headingThree" data-bs-parent="#accordion">
+                    <div class="card-body collapse-content">
+
+                      <div>
+                        <p class="inner-collapse" data-bs-toggle="collapse" data-bs-target="#loan-1"
+                          aria-expanded="true" aria-controls="loan-1">Who is the Online Lenders Alliance?
+                        </p>
+                        <div id="loan-1" class="collapse inner-collapse-content">
+                          <p>The Online Lenders Alliance (OLA), the center for lending, technology and innovation,
+                            represents the growing industry of companies offering loans online. OLA members abide by a
+                            list of Best Practices and Code of Conduct to ensure their customers are fully informed and
+                            fairly treated.
+                          </p>
+
+                        </div>
+                        <p class="inner-collapse" data-bs-toggle="collapse" data-bs-target="#loan-2"
+                          aria-expanded="true" aria-controls="loan-2">I don't have a printer and I want to print a copy
+                          of my loan documents. Can I get my documents another way?
+                        </p>
+                        <div id="loan-2" class="collapse inner-collapse-content">
+                          <p>If you do not have a printer handy, there are several ways to get copies of your documents
+                            to you. Your lender can usually email them to you, fax them directly, or fax them to your
+                            local Kinko's, Mail Boxes Etc., or PostNet so you can pick them up.
+
+
+                          </p>
+                          <p>To make these special arrangements, please contact your lender.</p>
+                        </div>
+                        <p class="inner-collapse" data-bs-toggle="collapse" data-bs-target="#loan-3"
+                          aria-expanded="true" aria-controls="loan-3">How do I know I’m being contacted by my lender?
+                        </p>
+                        <div id="loan-3" class="collapse inner-collapse-content">
+                          <p>If you are contacted by someone who says they are associated with this website or your
+                            lender asking for funds, please report their information to the OLA Consumer Hotline by
+                            calling (866) 299-7585.
+
+                          </p>
+                          <p>If you have been contacted by a collection service regarding your loan, and you want to be
+                            sure they are representing your lender, contact your lender. If you feel you are being
+                            contacted in error, or collections practices are abusive, contact the OLA. Do not make
+                            payments on your loan by putting funds on a prepaid card or by sending money via Western
+                            Union or any other transfer service.</p>
+                          <p>If your loan has been paid in full and you are still receiving collections notices, contact
+                            your lender and the OLA.</p>
+                          <p>If you are unable to make a loan payment on time, contact your lender immediately.</p>
+                        </div>
+                        <p class="inner-collapse" data-bs-toggle="collapse" data-bs-target="#loan-4"
+                          aria-expanded="true" aria-controls="loan-4">I have questions about my existing loan, where do
+                          I go?
+                        </p>
+                        <div id="loan-4" class="collapse inner-collapse-content">
+                          <p>For questions about your existing loan please contact your lender.
+                          </p>
+                          <p>For details, questions or concerns regarding your loan, please contact your lender
+                            directly. Contact information for your lender should be available on their website, in your
+                            loan documents, or on your bank statement.</p>
+                        </div>
+                        <p class="inner-collapse" data-bs-toggle="collapse" data-bs-target="#loan-5"
+                          aria-expanded="true" aria-controls="loan-5">I still have questions. How can I contact a
+                          representative?
+                        </p>
+                        <div id="loan-5" class=" collapse inner-collapse-content">
+                          <p>For your loan questions, please contact your lender. To contact us regarding non-loan
+                            related information, click here .
+                          </p>
+
+                        </div>
+
+
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-bs-dismiss="modal">Close</button>
+              <!-- You can add additional buttons here -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div>
+    <button id="back-to-top" class="btn btn-default btn-lg back-to-top ng-tns-c63-1 ng-star-inserted">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" style="height: 18px;width: 15px;fill: #000;">
+        <path
+          d="M201.4 137.4c12.5-12.5 32.8-12.5 45.3 0l160 160c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L224 205.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l160-160z" />
+      </svg></button>
+  </div>
   <script>
+    //// navbar
+    const hamburger = document.querySelector(".hamburger");
+    const navMenu = document.querySelector(".custom-nav-menu");
+
+    hamburger.addEventListener("click", mobileMenu);
+
+    function mobileMenu() {
+      hamburger.classList.toggle("active");
+      navMenu.classList.toggle("active");
+    }
+    const navLink = document.querySelectorAll(".custom-nav-link");
+
+    navLink.forEach((n) => n.addEventListener("click", closeMenu));
+
+    function closeMenu() {
+      hamburger.classList.remove("active");
+      navMenu.classList.remove("active");
+    }
+
     //  form
     function showSection(sectionId) {
       const sections = document.querySelectorAll(".form-section");
@@ -936,6 +2410,9 @@
       });
     });
   </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
 </body>
 
 </html>
