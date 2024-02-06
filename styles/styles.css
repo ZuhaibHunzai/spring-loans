@@ -281,6 +281,11 @@ footer {
 }
 
 /* Modal Styles */
+.faq-icon {
+  height: 14px;
+  width: 14px;
+  fill: #337ab7;
+}
 
 .modal-title-custom {
   font-size: 18px;
