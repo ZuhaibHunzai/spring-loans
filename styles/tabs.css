@@ -71,8 +71,8 @@
   border-radius: 16px;
   padding: 11px 30px;
   outline: none;
-  border: #88b03a;
-  color: #fff;
+  border: #88b03a !important;
+  color: #fff !important;
   font-size: 20px;
   cursor: pointer;
   letter-spacing: 0.25px;
