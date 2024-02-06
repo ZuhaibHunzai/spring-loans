@@ -286,7 +286,9 @@ footer {
   width: 14px;
   fill: #337ab7;
 }
-
+.icon-wrapper {
+  width: 15px;
+}
 .modal-title-custom {
   font-size: 18px;
 }
