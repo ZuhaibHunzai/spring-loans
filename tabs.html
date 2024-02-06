@@ -703,7 +703,7 @@
       <div class="form-container">
         <div class="form next-cards">
           <div>
-            <h2 class="card-heading">What Is Your ZIP Code?</h2>
+            <h2 class="card-heading">What Is Your Monthly Income?</h2>
           </div>
           <br />
           <div class="robert">
@@ -711,15 +711,47 @@
               <img src="/assets/Robert.webp" class="robert-img" />
             </div>
             <div class="robert-question">
-              <p>Let's see what options you have in your area.</p>
+              <p>
+                What is your approximate income before taxes? Please include any
+                additional benefit income including Social Security, Disability,
+                Pension, or other Benefit Source.
+              </p>
             </div>
+          </div>
+          <br />
+          <div>
+            <button class="border-button" onclick="nextPage('page13')">
+              $5000+
+            </button>
+            <button class="border-button" onclick="nextPage('page13')">
+              $4000-$5000
+            </button>
+            <button class="border-button" onclick="nextPage('page13')">
+              $3000-$4000
+            </button>
+            <button class="border-button" onclick="nextPage('page13')">
+              $2000-$2000
+            </button>
+            <button class="border-button" onclick="nextPage('page13')">
+              $1500-$2000
+            </button>
+            <button class="border-button" onclick="nextPage('page13')">
+              $1000-$1500
+            </button>
+            <button class="border-button" onclick="nextPage('page13')">
+              $500-$1000
+            </button>
           </div>
 
           <br />
           <div class="card-buttons">
-            <button class="btn next-btn" onclick="nextPage()">NEXT</button>
+            <button class="btn next-btn" onclick="nextPage('page11')">
+              NEXT
+            </button>
             <br />
-            <button class="btn back-btn" onclick="previousPage()">Back</button>
+            <button class="btn back-btn" onclick="previousPage('page8')">
+              Back
+            </button>
           </div>
           <br />
           <br />
@@ -745,7 +777,9 @@
       <div class="form-container">
         <div class="form next-cards">
           <div>
-            <h2 class="card-heading">What Is Your ZIP Code?</h2>
+            <h2 class="card-heading">
+              What Is Your Benefit Provider's Phone Number?
+            </h2>
           </div>
           <br />
           <div class="robert">
@@ -753,15 +787,49 @@
               <img src="/assets/Robert.webp" class="robert-img" />
             </div>
             <div class="robert-question">
-              <p>Let's see what options you have in your area.</p>
+              <p>In some cases, this number may be used for confirmation</p>
+            </div>
+          </div>
+          <br />
+          <div class="multiple-inputs">
+            <div>
+              <input
+                type="text"
+                id="subInput1"
+                maxlength="3"
+                class="sub-input"
+                placeholder="(XXX)"
+              />
+            </div>
+            <div>
+              <input
+                type="text"
+                id="subInput2"
+                maxlength="3"
+                class="sub-input"
+                placeholder="XXX"
+              />
+            </div>
+            <div>
+              <input
+                type="text"
+                id="subInput3"
+                maxlength="4"
+                class="sub-input"
+                placeholder="XXXX"
+              />
             </div>
           </div>
 
           <br />
           <div class="card-buttons">
-            <button class="btn next-btn" onclick="nextPage()">NEXT</button>
+            <button class="btn next-btn" onclick="nextPage('page10')">
+              NEXT
+            </button>
             <br />
-            <button class="btn back-btn" onclick="previousPage()">Back</button>
+            <button class="btn back-btn" onclick="previousPage('page8')">
+              Back
+            </button>
           </div>
           <br />
           <br />
@@ -787,7 +855,7 @@
       <div class="form-container">
         <div class="form next-cards">
           <div>
-            <h2 class="card-heading">What Is Your ZIP Code?</h2>
+            <h2 class="card-heading">How Long Have You Been Employed?</h2>
           </div>
           <br />
           <div class="robert">
@@ -795,15 +863,32 @@
               <img src="/assets/Robert.webp" class="robert-img" />
             </div>
             <div class="robert-question">
-              <p>Let's see what options you have in your area.</p>
+              <p>How long have you been with your current employer?</p>
             </div>
           </div>
-
+          <br />
+          <div>
+            <button class="border-button" onclick="nextPage('page10')">
+              5 Years or More
+            </button>
+            <button class="border-button" onclick="nextPage('page10')">
+              4 Years
+            </button>
+            <button class="border-button" onclick="nextPage('page10')">
+              3 Years
+            </button>
+            <button class="border-button" onclick="nextPage('page10')">
+              2 Years
+            </button>
+            <button class="border-button" onclick="nextPage('page10')">
+              1 Year or Less
+            </button>
+          </div>
           <br />
           <div class="card-buttons">
-            <button class="btn next-btn" onclick="nextPage()">NEXT</button>
-            <br />
-            <button class="btn back-btn" onclick="previousPage()">Back</button>
+            <button class="btn back-btn" onclick="previousPage('page9')">
+              Back
+            </button>
           </div>
           <br />
           <br />
@@ -829,7 +914,7 @@
       <div class="form-container">
         <div class="form next-cards">
           <div>
-            <h2 class="card-heading">What Is Your ZIP Code?</h2>
+            <h2 class="card-heading">How Are You Paid?</h2>
           </div>
           <br />
           <div class="robert">
@@ -837,15 +922,35 @@
               <img src="/assets/Robert.webp" class="robert-img" />
             </div>
             <div class="robert-question">
-              <p>Let's see what options you have in your area.</p>
+              <p>
+                Individuals who have direct deposit have a higher chance of
+                getting connected with a lender and/or lending partner
+              </p>
             </div>
+          </div>
+          <br />
+          <div>
+            <button class="border-button" onclick="nextPage('page14')">
+              Direct Deposit into Checking
+            </button>
+            <button class="border-button" onclick="nextPage('page15')">
+              Direct Deposit into Savings
+            </button>
+            <button class="border-button" onclick="nextPage('page14')">
+              Paper Check into Checking
+            </button>
+            <button class="border-button" onclick="nextPage('page15')">
+              Paper Check into Savings
+            </button>
           </div>
 
           <br />
           <div class="card-buttons">
-            <button class="btn next-btn" onclick="nextPage()">NEXT</button>
+            <button class="btn back-btn">No Bank Account?</button>
             <br />
-            <button class="btn back-btn" onclick="previousPage()">Back</button>
+            <button class="btn back-btn" onclick="previousPage('page12')">
+              Back
+            </button>
           </div>
           <br />
           <br />
@@ -871,7 +976,7 @@
       <div class="form-container">
         <div class="form next-cards">
           <div>
-            <h2 class="card-heading">What Is Your ZIP Code?</h2>
+            <h2 class="card-heading">How Often Do You Receive Your Income?</h2>
           </div>
           <br />
           <div class="robert">
@@ -879,15 +984,30 @@
               <img src="/assets/Robert.webp" class="robert-img" />
             </div>
             <div class="robert-question">
-              <p>Let's see what options you have in your area.</p>
+              <p>Please tell us how often you receive your income</p>
             </div>
+          </div>
+          <br />
+          <div>
+            <button class="border-button" onclick="nextPage('page15')">
+              Weekly
+            </button>
+            <button class="border-button" onclick="nextPage('page15')">
+              Every 2 Weeks
+            </button>
+            <button class="border-button" onclick="nextPage('page15')">
+              Monthly
+            </button>
+            <button class="border-button" onclick="nextPage('page15')">
+              Twice a Month
+            </button>
           </div>
 
           <br />
           <div class="card-buttons">
-            <button class="btn next-btn" onclick="nextPage()">NEXT</button>
-            <br />
-            <button class="btn back-btn" onclick="previousPage()">Back</button>
+            <button class="btn back-btn" onclick="previousPage('page13')">
+              Back
+            </button>
           </div>
           <br />
           <br />
@@ -913,7 +1033,9 @@
       <div class="form-container">
         <div class="form next-cards">
           <div>
-            <h2 class="card-heading">What Is Your ZIP Code?</h2>
+            <h2 class="card-heading">
+              Did You Mean “Checking” As Your Bank Account Type?
+            </h2>
           </div>
           <br />
           <div class="robert">
@@ -921,14 +1043,24 @@
               <img src="/assets/Robert.webp" class="robert-img" />
             </div>
             <div class="robert-question">
-              <p>Let's see what options you have in your area.</p>
+              <p>
+                Did you know that Banks are more likely to fund checking
+                accounts rather than savings accounts?
+              </p>
             </div>
+          </div>
+          <br />
+          <div>
+            <button class="border-button" onclick="nextPage('page14')">
+              Change To Checking
+            </button>
+            <button class="border-button" onclick="nextPage('page16')">
+              Continue With Selection
+            </button>
           </div>
 
           <br />
           <div class="card-buttons">
-            <button class="btn next-btn" onclick="nextPage()">NEXT</button>
-            <br />
             <button class="btn back-btn" onclick="previousPage()">Back</button>
           </div>
           <br />
@@ -955,23 +1087,32 @@
       <div class="form-container">
         <div class="form next-cards">
           <div>
-            <h2 class="card-heading">What Is Your ZIP Code?</h2>
+            <h2 class="card-heading">When Is Your Next Pay Date?</h2>
           </div>
           <br />
           <div class="robert">
             <div>
               <img src="/assets/Robert.webp" class="robert-img" />
             </div>
+            <br />
             <div class="robert-question">
-              <p>Let's see what options you have in your area.</p>
+              <p>Tell us when you will be getting paid next.</p>
             </div>
+          </div>
+          <br />
+          <div>
+            <input type="date" placeholder="Employer Name" class="input" />
           </div>
 
           <br />
           <div class="card-buttons">
-            <button class="btn next-btn" onclick="nextPage()">NEXT</button>
+            <button class="btn next-btn" onclick="nextPage('page17')">
+              NEXT
+            </button>
             <br />
-            <button class="btn back-btn" onclick="previousPage()">Back</button>
+            <button class="btn back-btn" onclick="previousPage('page15')">
+              Back
+            </button>
           </div>
           <br />
           <br />
@@ -992,6 +1133,553 @@
         </div>
       </div>
     </div>
+
+    <div class="form-section" id="page17">
+      <div class="form-container">
+        <div class="form next-cards">
+          <div>
+            <h2 class="card-heading">Are You In The Military?</h2>
+          </div>
+          <br />
+          <div class="robert">
+            <div>
+              <img src="/assets/Robert.webp" class="robert-img" />
+            </div>
+            <br />
+            <div class="robert-question">
+              <p>Only select yes if you are an active-duty service member.</p>
+            </div>
+          </div>
+
+          <br />
+          <div>
+            <button class="border-button" onclick="nextPage('page21')">
+              No
+            </button>
+            <button class="border-button" onclick="nextPage('page21')">
+              Yes
+            </button>
+          </div>
+
+          <br />
+          <div class="card-buttons">
+            <button class="btn back-btn" onclick="previousPage('page15')">
+              Back
+            </button>
+          </div>
+          <br />
+          <br />
+          <div class="card-img">
+            <img src="./assets/ssl.webp" class="ssl-img" />
+          </div>
+          <br />
+          <div class="lock">
+            <i
+              class="fa fa-lock"
+              style="font-size: 16px; color: #000"
+              class="icon"
+            ></i>
+            <p class="xs-text">
+              We use 256-bit SSL technology to encrypt your data
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-section" id="page18">
+      <div class="form-container">
+        <div class="form next-cards">
+          <div>
+            <h2 class="card-heading">
+              Do You Have A Vehicle Registered In Your Name?
+            </h2>
+          </div>
+          <br />
+          <div class="robert">
+            <div>
+              <img src="/assets/Robert.webp" class="robert-img" />
+            </div>
+            <br />
+            <div class="robert-question">
+              <p>Do you have a vehicle registered in your name?</p>
+            </div>
+          </div>
+          <br />
+          <div>
+            <button class="border-button" onclick="nextPage('page19')">
+              Yes, It's Paid off
+            </button>
+            <button class="border-button" onclick="nextPage('page19')">
+              Yes - I'm making payments
+            </button>
+            <button class="border-button" onclick="nextPage('page19')">
+              No
+            </button>
+          </div>
+
+          <br />
+          <div class="card-buttons">
+            <button class="btn back-btn" onclick="previousPage('page17')">
+              Back
+            </button>
+          </div>
+          <br />
+          <br />
+          <div class="card-img">
+            <img src="./assets/ssl.webp" class="ssl-img" />
+          </div>
+          <br />
+          <div class="lock">
+            <i
+              class="fa fa-lock"
+              style="font-size: 16px; color: #000"
+              class="icon"
+            ></i>
+            <p class="xs-text">
+              We use 256-bit SSL technology to encrypt your data
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-section" id="page19">
+      <div class="form-container">
+        <div class="form next-cards">
+          <div>
+            <h2 class="card-heading">What Is Your Social Security Number?</h2>
+          </div>
+          <br />
+          <div class="robert">
+            <div>
+              <img src="/assets/Robert.webp" class="robert-img" />
+            </div>
+            <br />
+            <div class="robert-question">
+              <p>
+                Your social security number is required for your protection and
+                may be used to confirm your identity.
+              </p>
+            </div>
+          </div>
+          <br />
+          <div class="multiple-inputs">
+            <div>
+              <input
+                type="text"
+                id="subInput1"
+                maxlength="3"
+                class="sub-input"
+                placeholder="- - -"
+              />
+            </div>
+            <div>
+              <input
+                type="text"
+                id="subInput2"
+                maxlength="2"
+                class="sub-input"
+                placeholder="- -"
+              />
+            </div>
+            <div>
+              <input
+                type="text"
+                id="subInput3"
+                maxlength="4"
+                class="sub-input"
+                placeholder="- - - -"
+              />
+            </div>
+          </div>
+
+          <br />
+          <div class="card-buttons">
+            <button class="btn next-btn" onclick="nextPage('page20')">
+              NEXT
+            </button>
+            <br />
+            <button class="btn back-btn" onclick="previousPage('page18')">
+              Back
+            </button>
+          </div>
+          <br />
+          <br />
+          <div class="card-img">
+            <img src="./assets/ssl.webp" class="ssl-img" />
+          </div>
+          <br />
+          <div class="lock">
+            <i
+              class="fa fa-lock"
+              style="font-size: 16px; color: #000"
+              class="icon"
+            ></i>
+            <p class="xs-text">
+              We use 256-bit SSL technology to encrypt your data
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-section" id="page20">
+      <div class="form-container">
+        <div class="form next-cards">
+          <div>
+            <h2 class="card-heading">
+              What Is Your Drivers License/State ID Number?
+            </h2>
+          </div>
+          <br />
+          <div class="robert">
+            <div>
+              <img src="/assets/Robert.webp" class="robert-img" />
+            </div>
+            <br />
+            <div class="robert-question">
+              <p>This number is used to verify your identity.</p>
+            </div>
+          </div>
+          <br />
+          <div>
+            <input
+              type="text"
+              placeholder="Drivers License/State ID Number"
+              class="input"
+            />
+          </div>
+
+          <br />
+          <select id="stateSelect" name="state" class="input">
+            <option value="AL">Alabama</option>
+            <option value="AK">Alaska</option>
+            <option value="AZ">Arizona</option>
+            <option value="AR">Arkansas</option>
+            <option value="CA">California</option>
+            <option value="CO">Colorado</option>
+            <option value="CT">Connecticut</option>
+            <option value="DE">Delaware</option>
+            <option value="FL">Florida</option>
+            <option value="GA">Georgia</option>
+            <option value="HI">Hawaii</option>
+            <option value="ID">Idaho</option>
+            <option value="IL">Illinois</option>
+            <option value="IN">Indiana</option>
+            <option value="IA">Iowa</option>
+            <option value="KS">Kansas</option>
+            <option value="KY">Kentucky</option>
+            <option value="LA">Louisiana</option>
+            <option value="ME">Maine</option>
+            <option value="MD">Maryland</option>
+            <option value="MA">Massachusetts</option>
+            <option value="MI">Michigan</option>
+            <option value="MN">Minnesota</option>
+            <option value="MS">Mississippi</option>
+            <option value="MO">Missouri</option>
+            <option value="MT">Montana</option>
+            <option value="NE">Nebraska</option>
+            <option value="NV">Nevada</option>
+            <option value="NH">New Hampshire</option>
+            <option value="NJ">New Jersey</option>
+            <option value="NM">New Mexico</option>
+            <option value="NY">New York</option>
+            <option value="NC">North Carolina</option>
+            <option value="ND">North Dakota</option>
+            <option value="OH">Ohio</option>
+            <option value="OK">Oklahoma</option>
+            <option value="OR">Oregon</option>
+            <option value="PA">Pennsylvania</option>
+            <option value="RI">Rhode Island</option>
+            <option value="SC">South Carolina</option>
+            <option value="SD">South Dakota</option>
+            <option value="TN">Tennessee</option>
+            <option value="TX">Texas</option>
+            <option value="UT">Utah</option>
+            <option value="VT">Vermont</option>
+            <option value="VA">Virginia</option>
+            <option value="WA">Washington</option>
+            <option value="WV">West Virginia</option>
+            <option value="WI">Wisconsin</option>
+            <option value="WY">Wyoming</option>
+          </select>
+          <br />
+
+          <br />
+          <div class="card-buttons">
+            <button class="btn next-btn" onclick="nextPage('page22')">
+              NEXT
+            </button>
+            <br />
+            <button class="btn back-btn" onclick="previousPage('page18')">
+              Back
+            </button>
+          </div>
+          <br />
+          <br />
+          <div class="card-img">
+            <img src="./assets/ssl.webp" class="ssl-img" />
+          </div>
+          <br />
+          <div class="lock">
+            <i
+              class="fa fa-lock"
+              style="font-size: 16px; color: #000"
+              class="icon"
+            ></i>
+            <p class="xs-text">
+              We use 256-bit SSL technology to encrypt your data
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-section" id="page21">
+      <div class="form-container">
+        <div class="form next-cards">
+          <div>
+            <h2 class="card-heading">How Much Credit Card Debt Do You Have?</h2>
+          </div>
+          <br />
+          <br />
+          <div>
+            <button class="border-button" onclick="nextPage('page18')">
+              I jave No Debt
+            </button>
+            <button class="border-button" onclick="nextPage('page18')">
+              Under $7,500
+            </button>
+            <button class="border-button" onclick="nextPage('page18')">
+              $7,500-$10,000
+            </button>
+            <button class="border-button" onclick="nextPage('page18')">
+              $10,000-$15,000
+            </button>
+            <button class="border-button" onclick="nextPage('page18')">
+              $15,000-$20,000
+            </button>
+            <button class="border-button" onclick="nextPage('page18')">
+              More Than 20,000
+            </button>
+          </div>
+
+          <br />
+          <div class="card-buttons">
+            <button class="btn back-btn" onclick="previousPage('page17')">
+              Back
+            </button>
+          </div>
+          <br />
+          <br />
+          <div class="card-img">
+            <img src="./assets/ssl.webp" class="ssl-img" />
+          </div>
+          <br />
+          <div class="lock">
+            <i
+              class="fa fa-lock"
+              style="font-size: 16px; color: #000"
+              class="icon"
+            ></i>
+            <p class="xs-text">
+              We use 256-bit SSL technology to encrypt your data
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-section" id="page22">
+      <div class="form-container">
+        <div class="form next-cards">
+          <div>
+            <h2 class="card-heading">
+              How Long Have You Lived At Your Residence?
+            </h2>
+          </div>
+          <br />
+          <div class="robert">
+            <div>
+              <img src="/assets/Robert.webp" class="robert-img" />
+            </div>
+            <br />
+            <div class="robert-question">
+              <p>Tell us how long you have lived at your current residence.</p>
+            </div>
+          </div>
+          <br />
+          <div>
+            <button class="border-button" onclick="nextPage('page23')">
+              1 year Or Less
+            </button>
+            <button class="border-button" onclick="nextPage('page23')">
+              2 Years
+            </button>
+            <button class="border-button" onclick="nextPage('page23')">
+              3 Years
+            </button>
+            <button class="border-button" onclick="nextPage('page23')">
+              4 Years
+            </button>
+            <button class="border-button" onclick="nextPage('page23')">
+              5 Years Or More
+            </button>
+          </div>
+
+          <br />
+          <div class="card-buttons">
+            <button class="btn back-btn" onclick="previousPage('page20')">
+              Back
+            </button>
+          </div>
+          <br />
+          <br />
+          <div class="card-img">
+            <img src="./assets/ssl.webp" class="ssl-img" />
+          </div>
+          <br />
+          <div class="lock">
+            <i
+              class="fa fa-lock"
+              style="font-size: 16px; color: #000"
+              class="icon"
+            ></i>
+            <p class="xs-text">
+              We use 256-bit SSL technology to encrypt your data
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-section" id="page23">
+      <div class="form-container">
+        <div class="form next-cards">
+          <div>
+            <h2 class="card-heading">
+              How Long Have You Had Your Bank Account Open?
+            </h2>
+          </div>
+          <br />
+          <div class="robert">
+            <div>
+              <img src="/assets/Robert.webp" class="robert-img" />
+            </div>
+            <br />
+            <div class="robert-question">
+              <p>How long have you had this bank account?</p>
+            </div>
+          </div>
+          <br />
+          <div>
+            <button class="border-button" onclick="nextPage('page24')">
+              1 year Or Less
+            </button>
+            <button class="border-button" onclick="nextPage('page24')">
+              2 Years
+            </button>
+            <button class="border-button" onclick="nextPage('page24')">
+              3 Years
+            </button>
+            <button class="border-button" onclick="nextPage('page24')">
+              4 Years
+            </button>
+            <button class="border-button" onclick="nextPage('page24')">
+              5 Years Or More
+            </button>
+          </div>
+
+          <br />
+          <div class="card-buttons">
+            <button class="btn back-btn" onclick="previousPage('page23')">
+              Back
+            </button>
+          </div>
+          <br />
+          <br />
+          <div class="card-img">
+            <img src="./assets/ssl.webp" class="ssl-img" />
+          </div>
+          <br />
+          <div class="lock">
+            <i
+              class="fa fa-lock"
+              style="font-size: 16px; color: #000"
+              class="icon"
+            ></i>
+            <p class="xs-text">
+              We use 256-bit SSL technology to encrypt your data
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-section" id="page24">
+      <div class="form-container">
+        <div class="form next-cards">
+          <div>
+            <h2 class="card-heading">Bank Information</h2>
+          </div>
+          <br />
+          <div class="robert">
+            <div>
+              <img src="/assets/Robert.webp" class="robert-img" />
+            </div>
+            <br />
+            <div class="robert-question">
+              <p>Where would you like the funds deposited?</p>
+            </div>
+          </div>
+          <br />
+          <div>
+            <input type="text" placeholder="Routing" class="input" />
+          </div>
+          <br />
+          <div>
+            <input type="text" placeholder="Account" class="input" />
+          </div>
+          <br />
+          <div>
+            <input type="text" placeholder="Bank Name" class="input" />
+          </div>
+          <br />
+          <div>
+            <img src="./assets/Check.webp" class="input-image" />
+          </div>
+
+          <br />
+          <div class="card-buttons">
+            <button class="btn next-btn" onclick="previousPage('page1')">
+              Next
+            </button>
+            <br />
+            <button class="btn back-btn" onclick="previousPage('page23')">
+              Back
+            </button>
+          </div>
+          <br />
+          <br />
+          <div class="card-img">
+            <img src="./assets/ssl.webp" class="ssl-img" />
+          </div>
+          <br />
+          <div class="lock">
+            <i
+              class="fa fa-lock"
+              style="font-size: 16px; color: #000"
+              class="icon"
+            ></i>
+            <p class="xs-text">
+              We use 256-bit SSL technology to encrypt your data
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <footer>
       <div class="footer-nav">
         <ul>
