@@ -67,7 +67,7 @@
   flex-direction: column;
 }
 .next-btn {
-  background-color: #88b03a;
+  background-color: #88b03a !important;
   border-radius: 16px;
   padding: 11px 30px;
   outline: none;
@@ -82,7 +82,7 @@
   outline: none;
   background-color: transparent;
   font-size: 14px;
-  color: #337ab7;
+  color: #337ab7 !important;
   cursor: pointer;
   letter-spacing: 0.5px;
   font-weight: 400;
