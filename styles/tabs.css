@@ -1,0 +1,99 @@
+.form-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 35px;
+}
+.next-cards {
+  box-shadow: none;
+  height: auto;
+}
+.robert {
+  display: flex;
+  background-color: #3c4761;
+  padding: 8px;
+  color: #fff;
+  border-radius: 8px;
+}
+.card-heading {
+  font-size: 30px;
+}
+.input {
+  width: 100%;
+  height: 34px;
+  padding: 6px 12px;
+  font-size: 14px;
+  outline: none;
+  border: 1px solid #bbbbbb;
+  border-radius: 6px;
+}
+.sub-input {
+  width: 100%;
+  height: 34px;
+  padding: 6px 12px;
+  font-size: 14px;
+  outline: none;
+  border: 1px solid #bbbbbb;
+}
+#subInput1 {
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+}
+#subInput3 {
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+.multiple-inputs {
+  width: 100%;
+  display: flex;
+  height: 34px;
+  border-radius: 0px;
+}
+.input:focus {
+  box-shadow: 0 0 5px rgba(0, 253, 17, 0.3);
+}
+.checkbox-with-text {
+  display: flex;
+}
+.desc {
+  font-size: 12px;
+  padding-left: 8px;
+}
+.card-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.next-btn {
+  background-color: #88b03a;
+  border-radius: 16px;
+  padding: 11px 30px;
+  outline: none;
+  border: #88b03a;
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+  letter-spacing: 0.25px;
+}
+.back-btn {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  font-size: 14px;
+  color: #337ab7;
+  cursor: pointer;
+  letter-spacing: 0.5px;
+  font-weight: 400;
+}
+.form-section {
+  display: none;
+}
+.robert-question {
+  padding: 8px;
+  letter-spacing: 0.25px;
+}
+.form-section.active {
+  display: block;
+}
